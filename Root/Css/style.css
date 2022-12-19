@@ -1,0 +1,565 @@
+/*Integrate a custom google font*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* =============================
+  General styles (Think this counts as "Add Dynamic Pseudo-classes to a style sheet"?)
+================================= */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  text-decoration: none;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+}
+/* =============================
+ Header 
+================================= */
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+}
+/* =============================
+ Nav 
+================================= */
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  list-style: none;
+  margin-top: 3rem;
+  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+  
+}
+.menu ul li a
+{
+  font-size: 24px;
+  color: #fff;
+}
+.menu ul li a:hover
+{
+    transform: translateY(-20px);
+    box-shadow: 0 1px 1px #fff;
+    Text-shadow: 0 0 5px #ec008c,
+                  0 0 10px #ec008c,
+                  0 0 20px #ec008c,
+                  0 0 40px #ec008c,
+                  0 0 60px #ec008c;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  padding-left: 1%;
+  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+  text-shadow: 0 0 10px #ec008c,
+              0 0 20px #ec008c,
+              0 0 40px #ec008c,
+              0 0 80px #ec008c,
+              0 0 160px #ec008c;
+}
+
+.nav_links{
+  list-style: none;
+  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover{
+  color: #ffffff;
+  text-shadow: 0 0 10px #ec008c, /*Apply a Text Shadow*/
+              0 0 20px #ec008c,
+              0 0 40px #ec008c,
+              0 0 80px #ec008c,
+              0 0 160px #ec008c;
+}
+
+.menu-btn
+{
+position: relative;
+width: 60px;
+height: 60px;
+background: url(https://i.ibb.co/HrfVRcx/menu.png);
+background-repeat: no-repeat;
+background-size: 30px;
+background-position: center;
+cursor: pointer;
+}
+.menu-btn.active
+{
+background: url(https://i.ibb.co/rt3HybH/close.png);
+background-repeat: no-repeat;
+background-size: 25px;
+background-position: center;
+cursor: pointer;
+}
+
+.menu-btn:hover {
+  box-shadow: 0 0 10px #ec008c,
+  0 0 20px #ec008c,
+  0 0 40px #ec008c,
+  0 0 80px #ec008c,
+  0 0 160px #ec008c;
+}
+/* =============================
+Hero
+================================= */
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active
+{
+  right: 300px;
+}
+
+.showcase video
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  mix-blend-mode: overlay;
+}
+
+.text
+{
+  position: center;
+  z-index: 10;
+  padding: 2rem;
+}
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.text h4
+{
+  font-size: 2em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+
+#typewriter {
+  border-right: transparent;
+  height: 35px;
+}
+.social
+{
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  background-color: transparent;
+}
+.social li
+{
+  position: relative;
+  list-style: none;
+  margin: 10px;
+  background-color: transparent;
+}
+.social ol
+{
+  position: relative;
+  list-style: none;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.social li a
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 1px #fff;
+    backdrop-filter: blur(2px);
+    transition: 1s;
+    overflow: hidden;
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+    
+}
+.social ol a
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 1px #fff;
+    backdrop-filter: blur(2px);
+    transition: 1s;
+    overflow: hidden;
+    -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+    
+}
+.social li a:hover
+{
+    transform: translateY(-20px);
+    box-shadow: 0 1px 1px #fff;
+    box-shadow: 0 0 5px #ec008c,
+                  0 0 10px #ec008c,
+                  0 0 20px #ec008c,
+                  0 0 40px #ec008c,
+                  0 0 60px #ec008c;
+}
+.social ol a:hover
+{
+  transform: translateY(-20px);
+  box-shadow: 0 1px 1px #fff;
+  box-shadow: 0 0 5px #ec008c,
+                0 0 10px #ec008c,
+                0 0 20px #ec008c,
+                0 0 40px #ec008c,
+                0 0 60px #ec008c;
+}
+.social li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skewX(45deg) translateX(150px);
+    transition: 1s;
+}
+.social ol a:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 1s;
+}
+.social li a:hover::before{
+    transform: skewX(45deg) translateX(-150px);
+}
+.social ol a:hover::before{
+  transform: skewX(45deg) translateX(-150px);
+}
+/*Add Animation to a webpage*/
+.social .animated{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+#mc-form input[type="email"]{
+  height: 1%;
+  font-size: 1rem;
+  line-height: 1%;
+  padding: 1.2rem 170px 1.2rem 24px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  margin-left: 1rem;
+  font-family: "Montserrat", sans-serif;
+  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+}
+#mc-form input[type=submit] {
+  color: #FFFFFF;
+  background: #ec008c;
+  border-color: #ec008c;
+  height: 4rem;
+  width: 10rem;
+  margin: 0;
+  position: absolute;
+  -webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+} 
+#mc-form input[type=submit]:hover{
+    color: #ffffff;
+    box-shadow: 0 0 10px #ec008c,
+                0 0 20px #ec008c,
+                0 0 40px #ec008c,
+                0 0 80px #ec008c,
+                0 0 160px #ec008c;
+}
+
+#Signup-form input
+{
+margin: auto;
+margin-top: 1rem;
+width: 100%;
+height: 3rem;
+padding: 1.2rem 170px 1.2rem 24px;
+}
+
+#Signup-form textarea
+{
+margin-top: 1rem;
+width: 100%;
+padding: 1.2rem 170px 1.2rem 24px;
+}
+
+#Signup-form button
+{
+font-size: 1rem;
+padding: 1.2rem 170px 1.2rem 24px;
+background: rgba(255, 255, 255, 0.05);
+color: #FFFFFF;
+font-family: "Montserrat", sans-serif;
+color: #FFFFFF;
+background: #ec008c;
+border-color: #ec008c;
+height: 4rem;
+-webkit-box-reflect: below 0px linear-gradient(transparent,#0002);
+}
+
+#Signup-form button:hover{
+color: #ffffff;
+box-shadow: 0 0 10px #ec008c,
+            0 0 20px #ec008c,
+            0 0 40px #ec008c,
+            0 0 80px #ec008c,
+            0 0 160px #ec008c;
+}
+
+/* =============================
+Contact page specific styles
+================================= */
+
+.Contact-Title-Boxes
+{
+  display: flex; 
+  align-items: flex-start;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  
+  background-size: cover;
+  padding:1rem;
+}
+
+.Location-box
+{
+  flex: 1;
+  order: 1;
+  text-align: center;
+}
+
+.Phone-box
+{
+  flex: 1;
+  order: 1;
+  text-align: center;
+}
+
+.Email-box
+{
+  flex: 1;
+  order: 1;
+  text-align: center;
+}
+
+.Name-And-Email
+{
+  display: flex;
+}
+
+/* =============================
+Mobile
+================================= */
+.Mobile .nav_links {
+  display: none;
+}
+/*Style for desktop */
+@media (min-width: 1201px){
+  .p{
+    margin: 1;
+  }
+}
+/*Style for tablet */ /*Create a media Query for a tablet viewport*/
+@media (max-width: 1200px)
+{
+  .showcase,
+  .showcase header
+  {
+  padding: 40px;
+  }
+  .text h2
+  {
+  font-size: 3em;
+  }
+  .text h3
+  {
+  font-size: 2em;
+  }
+  /*Create Appropriate column layouts for all viewports*/
+  .navbar{
+    flex-direction: column;
+  }
+/* Show and Hide Content for appropriate Viewport*/
+.Desktop .nav_links{
+  display: none;
+  }
+  .Mobile .nav_links{
+    display: inline-block;
+  }
+}
+/*Style for mobile */ /*Create a Sticky Header for mobile*/
+@media (max-width: 600px)
+{
+  .showcase,
+  .showcase header
+  {
+    padding: 40px;
+  }
+  .text h2
+  {
+    font-size: 3em;
+  }
+  .text h3
+  {
+    font-size: 2em;
+  }
+  .navbar{
+    flex-direction: column;
+  }
+.stick {
+  padding: 10px 16px;
+}
+
+.content {
+  padding: 16px;
+}
+ /*Add a sticky header*/ 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+
+  .Desktop .nav_links{
+    display: none;
+  }
+  .Mobile .nav_links{
+    display: none;
+  }
+}
+/*Create a Media Query and related style for print*/
+@media print {
+  p.bodyText {font-family:Arial, Helvetica, sans-serif;}
+}
